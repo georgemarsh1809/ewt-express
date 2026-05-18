@@ -1,4 +1,6 @@
-export default function Contact() {
+import type { Contact as ContactType } from '@/lib/sanity-types';
+
+export default function Contact({ data }: { data: ContactType }) {
     return (
         <section
             id="contact"
@@ -10,13 +12,14 @@ export default function Contact() {
                         Contact
                     </div>
                     <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
-                        Need a quote?
+                        {data.headingPrefix}
                         <br />
-                        <span className="text-accent">We&apos;re here.</span>
+                        <span className="text-accent">
+                            {data.headingHighlight}
+                        </span>
                     </h2>
                     <p className="mt-6 text-base md:text-lg text-background/70 max-w-md leading-relaxed">
-                        Speak to the team about a one-off run, regular work, or
-                        storage. 24/7, every day of the year.
+                        {data.intro}
                     </p>
                 </div>
                 <div className="lg:col-span-7 grid sm:grid-cols-2 gap-x-8 gap-y-10 lg:pl-8">
@@ -25,18 +28,15 @@ export default function Contact() {
                             Phone
                         </div>
                         <div className="mt-2 space-y-1">
-                            <a
-                                href="tel:+441322276684"
-                                className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
-                            >
-                                01322 276684
-                            </a>
-                            <a
-                                href="tel:+447523920294"
-                                className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
-                            >
-                                07523 920294
-                            </a>
+                            {data.phones.map((phone) => (
+                                <a
+                                    key={phone}
+                                    href={`tel:${phone.replace(/\s/g, '')}`}
+                                    className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
+                                >
+                                    {phone}
+                                </a>
+                            ))}
                         </div>
                     </div>
                     <div>
@@ -44,29 +44,23 @@ export default function Contact() {
                             Email
                         </div>
                         <div className="mt-2 space-y-1">
-                            <a
-                                href="mailto:sales@ewtexpress.co.uk"
-                                className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
-                            >
-                                sales@ewtexpress.co.uk
-                            </a>
-                            <a
-                                href="mailto:awood@ewtdartford.co.uk"
-                                className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
-                            >
-                                awood@ewtdartford.co.uk
-                            </a>
+                            {data.emails.map((email) => (
+                                <a
+                                    key={email}
+                                    href={`mailto:${email}`}
+                                    className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
+                                >
+                                    {email}
+                                </a>
+                            ))}
                         </div>
                     </div>
                     <ContactBlock
                         label="Website"
-                        value="ewtdartford.co.uk"
-                        href="https://www.ewtdartford.co.uk"
+                        value={data.website}
+                        href={`https://www.${data.website.replace(/^https?:\/\/(www\.)?/, '')}`}
                     />
-                    <ContactBlock
-                        label="Based in"
-                        value={'Dartford, Kent\nUnited Kingdom'}
-                    />
+                    <ContactBlock label="Based in" value={data.address} />
                 </div>
             </div>
         </section>

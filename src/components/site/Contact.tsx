@@ -56,6 +56,11 @@ export default function Contact({ data }: { data: ContactType }) {
                         </div>
                     </div>
                     <ContactBlock label="Based in" value={data.address} />
+                    <ContactBlock
+                        label="LinkedIn"
+                        value="EWT Express"
+                        href="https://www.linkedin.com/company/ewt-express/"
+                    />
                 </div>
             </div>
         </section>
@@ -76,8 +81,25 @@ function ContactBlock({
             <div className="text-xs uppercase tracking-widest text-background/50 font-semibold">
                 {label}
             </div>
-            <div className="mt-2 text-xl md:text-2xl font-semibold whitespace-pre-line group-hover:text-accent transition-colors">
+            <div className="mt-2 flex items-center gap-2 text-xl md:text-2xl font-semibold whitespace-pre-line group-hover:text-accent transition-colors">
                 {value}
+                {href && (
+                    <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="flex-shrink-0"
+                    >
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                )}
             </div>
         </>
     );
@@ -85,6 +107,7 @@ function ContactBlock({
         <a
             href={href}
             className="group block border-t border-background/15 pt-5"
+            target="blank"
         >
             {content}
         </a>

@@ -53,7 +53,7 @@ export default function Nav() {
                         href="#contact"
                         className="inline-flex items-center rounded-full bg-foreground text-background px-5 py-2.5 text-sm font-semibold hover:bg-foreground/90 transition-colors"
                     >
-                        Get a Quote
+                        Get in touch
                     </a>
                 </nav>
                 <button

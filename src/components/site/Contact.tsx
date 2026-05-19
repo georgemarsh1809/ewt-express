@@ -55,11 +55,6 @@ export default function Contact({ data }: { data: ContactType }) {
                             ))}
                         </div>
                     </div>
-                    <ContactBlock
-                        label="Website"
-                        value={data.website}
-                        href={`https://www.${data.website.replace(/^https?:\/\/(www\.)?/, '')}`}
-                    />
                     <ContactBlock label="Based in" value={data.address} />
                 </div>
             </div>

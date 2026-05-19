@@ -14,23 +14,23 @@ export default function Services({ data }: { data: ServicesType }) {
                     <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
                         {data.heading}
                     </h2>
-                    <p className="mt-6 text-lg text-foreground/85 leading-relaxed">
+                    <p className="mt-6 text-lg text-foreground leading-relaxed">
                         {data.intro}
                     </p>
                 </div>
-                <div className="mt-16 grid md:grid-cols-3 gap-px bg-border rounded-2xl overflow-hidden border border-border">
+                <div className="mt-16 grid md:grid-cols-3 gap-6 lg:gap-8">
                     {data.items.map((s, i) => (
                         <div
                             key={s.title}
-                            className="bg-background p-8 md:p-10 flex flex-col gap-6 min-h-[260px]"
+                            className="bg-background p-8 md:p-10 flex flex-col gap-6 min-h-[260px] rounded-2xl border-2 border-gray-300 shadow-md hover:shadow-lg transition-shadow"
                         >
-                            <div className="text-sm font-mono text-muted-foreground">
+                            <div className="text-sm font-mono text-gray-600 font-semibold">
                                 {String(i + 1).padStart(2, '0')}
                             </div>
                             <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
                                 {s.title}
                             </h3>
-                            <p className="text-base text-muted-foreground leading-relaxed mt-auto">
+                            <p className="text-base text-foreground/75 leading-relaxed">
                                 {s.description}
                             </p>
                         </div>

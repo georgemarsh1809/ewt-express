@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import logo from '@/assets/express-logo.png';
 
 const links = [
@@ -9,23 +9,11 @@ const links = [
 ];
 
 export default function Nav() {
-    const [scrolled, setScrolled] = useState(false);
     const [open, setOpen] = useState(false);
-
-    useEffect(() => {
-        const onScroll = () => setScrolled(window.scrollY > 80);
-        onScroll();
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
-    }, []);
 
     return (
         <header
-            className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-                scrolled
-                    ? 'bg-background/90 backdrop-blur-md border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.02)]'
-                    : 'bg-transparent'
-            }`}
+            className="fixed top-0 inset-x-0 z-50 bg-white border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.02)]"
         >
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between">
                 <a
@@ -36,7 +24,7 @@ export default function Nav() {
                     <img
                         src={logo}
                         alt="EWT Express"
-                        className="h-7 md:h-8 w-auto"
+                        className="h-7 md:h-11 w-auto"
                     />
                 </a>
                 <nav className="hidden md:flex items-center gap-9">

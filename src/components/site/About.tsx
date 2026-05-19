@@ -1,4 +1,5 @@
 import { PortableText } from '@portabletext/react';
+import adamImage from '@/assets/adam.jpeg';
 import type { About as AboutType } from '@/lib/sanity-types';
 
 export default function About({ data }: { data: AboutType }) {
@@ -13,7 +14,12 @@ export default function About({ data }: { data: AboutType }) {
                         About
                     </div>
                 </div>
-                <div className="mt-6 space-y-6 text-lg md:text-xl text-foreground/85 leading-relaxed">
+                <div className="mt-6 space-y-6 text-base md:text-lg text-foreground leading-relaxed">
+                    <img
+                        src={adamImage}
+                        alt="Adam"
+                        className="float-left w-56 h-56 md:w-72 md:h-72 rounded-full object-cover mr-8 mb-6"
+                    />
                     <PortableText
                         value={data.body}
                         components={{
@@ -28,12 +34,12 @@ export default function About({ data }: { data: AboutType }) {
                 {data.stats.map((s) => (
                     <div
                         key={s.label}
-                        className="bg-background/60 backdrop-blur-sm border border-border rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-shadow"
+                        className="border-gray-300 bg-gray-100 border-2 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center justify-center text-center"
                     >
                         <div className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
                             {s.value}
                         </div>
-                        <div className="mt-3 text-sm text-muted-foreground font-medium">
+                        <div className="mt-4 text-sm text-foreground/75 font-medium">
                             {s.label}
                         </div>
                     </div>

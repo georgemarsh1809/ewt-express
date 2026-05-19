@@ -8,7 +8,7 @@ export default function Contact({ data }: { data: ContactType }) {
         >
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-5">
-                    <div className="text-sm font-semibold text-accent uppercase tracking-widest">
+                    <div className="text-lg font-semibold text-accent uppercase tracking-widest">
                         Contact
                     </div>
                     <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">

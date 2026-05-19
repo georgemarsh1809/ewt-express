@@ -7,7 +7,7 @@ export default function Fleet({ data }: { data: FleetType }) {
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
                 <div className="flex flex-col gap-6 max-w-3xl">
                     <div>
-                        <div className="text-sm font-semibold text-primary uppercase tracking-widest">
+                        <div className="text-lg font-semibold text-primary uppercase tracking-widest">
                             Fleet
                         </div>
                         <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">

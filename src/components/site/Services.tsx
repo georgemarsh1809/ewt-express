@@ -8,7 +8,7 @@ export default function Services({ data }: { data: ServicesType }) {
         >
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
                 <div className="max-w-3xl mb-6">
-                    <div className="text-sm font-semibold text-primary uppercase tracking-widest">
+                    <div className="text-lg font-semibold text-primary uppercase tracking-widest">
                         Services
                     </div>
                     <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">

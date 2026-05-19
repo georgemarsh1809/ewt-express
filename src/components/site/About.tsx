@@ -10,7 +10,7 @@ export default function About({ data }: { data: AboutType }) {
         >
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
                 <div>
-                    <div className="text-sm font-semibold text-primary uppercase tracking-widest">
+                    <div className="text-lg font-semibold text-primary uppercase tracking-widest">
                         About
                     </div>
                 </div>

@@ -14,7 +14,7 @@ export default function Fleet({ data }: { data: FleetType }) {
                             {data.heading}
                         </h2>
                     </div>
-                    <p className="text-sm text-foreground/75">
+                    <p className="text-lg text-foreground leading-relaxed">
                         {data.sideNotePrefix}{' '}
                         <span className="font-semibold text-foreground">
                             {data.sideNoteHighlight}

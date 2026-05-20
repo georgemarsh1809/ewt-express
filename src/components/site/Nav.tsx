@@ -12,13 +12,11 @@ export default function Nav() {
     const [open, setOpen] = useState(false);
 
     return (
-        <header
-            className="fixed top-0 inset-x-0 z-50 bg-white border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.02)]"
-        >
+        <header className="fixed top-0 inset-x-0 z-50 bg-white border-b border-border shadow-[0_1px_0_rgba(0,0,0,0.02)]">
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10 h-16 md:h-20 flex items-center justify-between">
                 <a
                     href="#top"
-                    className="flex items-center"
+                    className="flex flex-col items-center"
                     aria-label="EWT Express home"
                 >
                     <img
@@ -26,6 +24,9 @@ export default function Nav() {
                         alt="EWT Express"
                         className="h-7 md:h-11 w-auto"
                     />
+                    <span className="text-[0.68rem] text-primary font-semibold uppercase tracking-widest mt-0.5">
+                        Temperature Controlled Transport
+                    </span>
                 </a>
                 <nav className="hidden md:flex items-center gap-9">
                     {links.map((l) => (

@@ -37,7 +37,7 @@ export default function Fleet({ data }: { data: FleetType }) {
                                             src={imageUrl}
                                             alt={v.image?.alt || v.name}
                                             loading="lazy"
-                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                                            className="w-full h-full object-cover scale-125"
                                         />
                                     ) : (
                                         <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-muted to-secondary text-muted-foreground text-sm">

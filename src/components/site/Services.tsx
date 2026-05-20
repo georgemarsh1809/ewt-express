@@ -8,10 +8,10 @@ export default function Services({ data }: { data: ServicesType }) {
         >
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
                 <div className="max-w-3xl mb-6">
-                    <div className="text-lg font-semibold text-primary uppercase tracking-widest">
+                    <div className="text-2xl font-semibold text-primary uppercase tracking-widest">
                         Services
                     </div>
-                    <h2 className="mt-4 text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+                    <h2 className="mt-4 text-5xl md:text-6xl font-bold tracking-tight text-foreground">
                         {data.heading}
                     </h2>
                     <p className="mt-6 text-lg text-foreground leading-relaxed">
@@ -34,14 +34,13 @@ export default function Services({ data }: { data: ServicesType }) {
                                 className="bg-background p-8 md:p-10 flex flex-col gap-6 min-h-[260px] rounded-2xl border-2 border-gray-300 shadow-md hover:shadow-lg transition-shadow"
                             >
                                 <div className="flex items-start justify-between">
-                                    <div className="text-sm font-mono text-gray-600 font-semibold">
-                                        {String(i + 1).padStart(2, '0')}
-                                    </div>
-                                    <i className={`fas ${iconClasses[i]} text-2xl text-gray-600`}></i>
+                                    <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground flex-1">
+                                        {s.title}
+                                    </h3>
+                                    <i
+                                        className={`fas ${iconClasses[i]} text-2xl text-gray-600 ml-4 flex-shrink-0`}
+                                    ></i>
                                 </div>
-                                <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
-                                    {s.title}
-                                </h3>
                                 <p className="text-base text-foreground/75 leading-relaxed">
                                     {s.description}
                                 </p>

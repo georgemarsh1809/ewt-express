@@ -4,27 +4,27 @@ export default function Contact({ data }: { data: ContactType }) {
     return (
         <section
             id="contact"
-            className="scroll-mt-24 py-24 md:py-32 border-t border-border bg-foreground text-background"
+            className="scroll-mt-24 py-24 md:py-32 border-t border-border bg-blue-900 text-white"
         >
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10 grid lg:grid-cols-12 gap-12">
                 <div className="lg:col-span-5">
-                    <div className="text-lg font-semibold text-accent uppercase tracking-widest">
+                    <div className="text-2xl font-semibold text-accent uppercase tracking-widest">
                         Contact
                     </div>
-                    <h2 className="mt-4 text-4xl md:text-6xl font-bold tracking-tight leading-[1.05]">
+                    <h2 className="mt-4 text-5xl md:text-7xl font-bold tracking-tight leading-[1.05]">
                         {data.headingPrefix}
                         <br />
                         <span className="text-accent">
                             {data.headingHighlight}
                         </span>
                     </h2>
-                    <p className="mt-6 text-base md:text-lg text-background/70 max-w-md leading-relaxed">
+                    <p className="mt-6 text-base md:text-lg text-white/70 max-w-md leading-relaxed">
                         {data.intro}
                     </p>
                 </div>
                 <div className="lg:col-span-7 grid sm:grid-cols-2 gap-x-8 gap-y-10 lg:pl-8">
                     <div>
-                        <div className="text-xs uppercase tracking-widest text-background/50 font-semibold">
+                        <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">
                             Phone
                         </div>
                         <div className="mt-2 space-y-1">
@@ -32,7 +32,7 @@ export default function Contact({ data }: { data: ContactType }) {
                                 <a
                                     key={phone}
                                     href={`tel:${phone.replace(/\s/g, '')}`}
-                                    className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
+                                    className="block text-xl md:text-2xl font-semibold text-white hover:text-accent transition-colors"
                                 >
                                     {phone}
                                 </a>
@@ -40,7 +40,7 @@ export default function Contact({ data }: { data: ContactType }) {
                         </div>
                     </div>
                     <div>
-                        <div className="text-xs uppercase tracking-widest text-background/50 font-semibold">
+                        <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">
                             Email
                         </div>
                         <div className="mt-2 space-y-1">
@@ -48,7 +48,7 @@ export default function Contact({ data }: { data: ContactType }) {
                                 <a
                                     key={email}
                                     href={`mailto:${email}`}
-                                    className="block text-xl md:text-2xl font-semibold text-background hover:text-accent transition-colors"
+                                    className="block text-xl md:text-2xl font-semibold text-white hover:text-accent transition-colors"
                                 >
                                     {email}
                                 </a>
@@ -78,7 +78,7 @@ function ContactBlock({
 }) {
     const content = (
         <>
-            <div className="text-xs uppercase tracking-widest text-background/50 font-semibold">
+            <div className="text-xs uppercase tracking-widest text-white/50 font-semibold">
                 {label}
             </div>
             <div className="mt-2 flex items-center gap-2 text-xl md:text-2xl font-semibold whitespace-pre-line group-hover:text-accent transition-colors">
@@ -106,12 +106,12 @@ function ContactBlock({
     return href ? (
         <a
             href={href}
-            className="group block border-t border-background/15 pt-5"
+            className="group block border-t border-white/15 pt-5"
             target="blank"
         >
             {content}
         </a>
     ) : (
-        <div className="border-t border-background/15 pt-5">{content}</div>
+        <div className="border-t border-white/15 pt-5">{content}</div>
     );
 }

@@ -10,7 +10,7 @@ export default function About({ data }: { data: AboutType }) {
         >
             <div className="mx-auto max-w-[1280px] px-6 lg:px-10">
                 <div>
-                    <div className="text-lg font-semibold text-primary uppercase tracking-widest">
+                    <div className="text-2xl font-semibold text-primary uppercase tracking-widest">
                         About
                     </div>
                 </div>
@@ -34,7 +34,7 @@ export default function About({ data }: { data: AboutType }) {
                 {data.stats.map((s) => (
                     <div
                         key={s.label}
-                        className="border-gray-300 bg-gray-100 border-2 rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-shadow flex flex-col items-center justify-center text-center"
+                        className="bg-white border-2 border-gray-100 rounded-2xl p-8 md:p-10 shadow-xl hover:shadow-2xl transition-shadow flex flex-col items-center justify-center text-center ring-1 ring-primary/10"
                     >
                         <div className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
                             {s.value}

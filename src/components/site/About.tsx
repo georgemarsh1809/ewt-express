@@ -18,7 +18,7 @@ export default function About({ data }: { data: AboutType }) {
                     <img
                         src={adamImage}
                         alt="Adam"
-                        className="float-left w-54 h-54 md:w-70 md:h-70 rounded-full object-cover mr-8 mb-6"
+                        className="md:float-left w-54 h-54 md:w-70 md:h-70 rounded-full object-cover mx-auto block md:inline md:mr-8 mb-6"
                     />
                     <PortableText
                         value={data.body}

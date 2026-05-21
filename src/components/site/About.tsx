@@ -1,5 +1,5 @@
 import { PortableText } from '@portabletext/react';
-import adamImage from '@/assets/adam.jpeg';
+import adamImage from '@/assets/adam2.jpeg';
 import type { About as AboutType } from '@/lib/sanity-types';
 
 export default function About({ data }: { data: AboutType }) {
